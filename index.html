@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script src="./script.js" defer></script>
+    <title>Student Enrollment Form</title>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="header">
+            <h1>Student Enrollment Form</h1>
+        </div>
+
+        <div class="container">
+            <form onsubmit="event.preventDefault(); createDetailsCard();reset();">
+
+                <div class="input-field name-field">
+                    <i class="bx bx-user-circle"></i>
+                    <input type="text" placeholder="Name of the student" id="name" required>
+                </div>
+
+                <div class="input-field email-field">
+                    <i class="bx bx-envelope" ></i>
+                    <input type="email" placeholder="Email Id" id="email" required>
+                </div>
+
+                <div class="input-field website-field">
+                    <i class="bx bx-link" ></i>
+                    <input type="url" placeholder="Website URL" id="website" required>
+                </div>
+
+                <div class="input-field image-field">
+                    <i class="bx bxs-image-add" ></i>
+                    <input type="url" placeholder="Image URL" id="image">
+                </div>
+
+                <div class="gender-field">
+                    <span>
+                        <input type="radio" name="gender" id="male" value="Male" required>
+                        <label for="male">Male</label>
+                    </span>
+
+                    <span>
+                        <input type="radio" name="gender" id="female" value="Female" required>
+                        <label for="female">Female</label>
+                    </span>
+                </div>
+
+                    
+                <div class="skills-options">
+                    <span class="sills-label">Skills : </span>
+                    <span>
+                        <input type="checkbox" value="HTML">
+                        <label>HTML</label>
+                    </span>
+
+                    <span>
+                        <input type="checkbox" value="CSS">
+                        <label>Css</label>
+                    </span>
+
+                    <span>
+                        <input type="checkbox" value="JavaScript">
+                        <label>JS</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" value="React">
+                        <label>React</label>
+                    </span>
+                        
+                </div>
+                
+                <div class="btn-section">
+                    <button type="reset" ><i class="bx bx-trash"></i></button>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+
+            <span class="devider"></span>
+
+            <div class="details-show">
+                
+                <h2>Enrolled Students</h2>
+                <div class="details-container empty"></div>
+                
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
